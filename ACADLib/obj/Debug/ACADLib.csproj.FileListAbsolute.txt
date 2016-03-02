@@ -1,0 +1,88 @@
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\bin\Debug\ACADLib.dll
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\bin\Debug\ACADLib.pdb
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.dll
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.pdb
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\UserControl1.baml
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\UserControl1.g.cs
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.g.resources
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.Form1.resources
+c:\users\алексей дудченко\documents\visual studio 2012\Projects\ACADLib\ACADLib\obj\Debug\ACADLib.csproj.GenerateResource.Cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\UserControl1.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\UserControl1.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.g.resources
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.Form1.resources
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.csproj.GenerateResource.Cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 13февр 402\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\UserControl1.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\UserControl1.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.g.resources
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.Form1.resources
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.csproj.GenerateResource.Cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib final\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\UserControl1.baml
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\UserControl1.g.cs
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.g.resources
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.Form1.resources
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.csproj.GenerateResource.Cache
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Dropbox\ACADLib final\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\UserControl1.baml
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\UserControl1.g.cs
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib.g.resources
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Dropbox\ACADLib\ACADLib\obj\Debug\ACADLib_MarkupCompile.lref
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib_MarkupCompile.lref
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib.g.resources
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\MainUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\MainUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\PointUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\PointUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\LineUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\CircleUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\LineUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 0134\ACADLib\obj\Debug\Views\CircleUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib.csprojResolveAssemblyReference.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\MainUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\PointUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\LineUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\CircleUserControl.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib_MarkupCompile.cache
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib_MarkupCompile.lref
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\bin\Debug\ACADLib.dll
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\bin\Debug\ACADLib.pdb
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\MainUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\PointUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\LineUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\Views\CircleUserControl.baml
+C:\Users\Алексей Дудченко\Desktop\ACADLib 2808160130\ACADLib\obj\Debug\ACADLib.g.resources

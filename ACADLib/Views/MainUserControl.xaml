@@ -1,0 +1,148 @@
+﻿<Window x:Class="ACADLib.Views.MainUserControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:c="clr-namespace:ACADLib.ViewModel"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ACADLib.ViewModel"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="205"
+        Height="300"
+        mc:Ignorable="d">
+
+
+    <Grid Background="#FFE7E7E7">
+        <StackPanel>
+            <StackPanel Width="200"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+                <StackPanel.DataContext>
+                    <local:LayerViewModel />
+                </StackPanel.DataContext>
+                <Label Content="Слои"
+                       FontSize="13"
+                       FontWeight="Bold" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="ComboBoxLayer" 
+                              ItemsSource="{Binding Path=LayerNameList, 
+                                                    Mode=TwoWay}" 
+                              SelectedValue="{Binding Path=SelectedLayer, Mode=TwoWay}"/>
+                    <Button Grid.Column="1"
+                            Command="{Binding GetLayerNameCommand}"
+                            Content="Обновить" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Название" />
+                    <TextBox x:Name="TextBoxNameLayer"
+                             Grid.Column="1"
+                             Text="{Binding Path=LayerName,
+                                            Mode=TwoWay}" />
+                    <ComboBox x:Name="ComboBoxColor"
+                              Grid.Row="1"
+                              Grid.Column="1"
+                              SelectedIndex="{Binding Path=ColorIndex}">
+                        <System:String>Красный</System:String>
+                        <System:String>Зеленый</System:String>
+                        <System:String>Желтый</System:String>
+                        <System:String>Синий</System:String>
+                        <System:String>Белый</System:String>
+                        <System:String>Черный</System:String>
+                        <System:String>Серый</System:String>
+                    </ComboBox>
+                    <Label Grid.Row="1" Content="Цвет" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="78*" />
+                        <ColumnDefinition Width="115*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Видимость" />
+                    <CheckBox x:Name="CheckIsOff"
+                              Grid.Column="1"
+                              VerticalAlignment="Center"
+                              IsChecked="{Binding Path=IsOff,
+                                                  Mode=TwoWay}" />
+                </Grid>
+
+                <Button x:Name="ButtonCreateLayer"
+                        Command="{Binding ButtonCreateLayerCommand}"
+                        Content="Создать" />
+
+                <Button x:Name="ButtonApplyLayer"
+                        Command="{Binding BattonApplyLayerCommand}"
+                        Content="Применить" />
+
+            </StackPanel>
+
+            <StackPanel>
+                <StackPanel.DataContext>
+                    <local:MainViewModel />
+                </StackPanel.DataContext>
+                <Label Content="Объекты"
+                       FontSize="14"
+                       FontWeight="Bold" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*" />
+                        <ColumnDefinition Width="55*" />
+                        <ColumnDefinition Width="40*" />
+                        <ColumnDefinition Width="55*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="ButtonGetPoint"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Command="{Binding PointWindowCommand}"
+                            Content="Точка" />
+                    <Button x:Name="ButtonGetLine"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Command="{Binding LineWindowCommand}"
+                            Content="Линия" />
+                    <Button x:Name="ButtonGetCircle"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Command="{Binding CircleWindowCommand}"
+                            Content="Окружность" />
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
