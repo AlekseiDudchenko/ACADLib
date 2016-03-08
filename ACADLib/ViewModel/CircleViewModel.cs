@@ -19,13 +19,14 @@ namespace ACADLib.ViewModel
        
         }
 
-        private double _x1;
-        private double _y1;
-        private double _z1;
-        private double _circleRadius;
+        
+
+
+
 
         private ObjectId _selObjectID;
 
+        private double _x1;
         public double X1
         {
             get { return _x1; }
@@ -39,6 +40,7 @@ namespace ACADLib.ViewModel
             }
         }
 
+        private double _y1;
         public double Y1
         {
             get { return _y1; }
@@ -52,6 +54,7 @@ namespace ACADLib.ViewModel
             }
         }
 
+        private double _z1;
         public double Z1
         {
             get { return _z1; }
@@ -66,6 +69,7 @@ namespace ACADLib.ViewModel
             }
         }
 
+        private double _circleRadius;
         public double CircleRadius
         {
             get { return _circleRadius; }

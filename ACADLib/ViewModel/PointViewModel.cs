@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using ACADLib.Models;
 using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
 
 
 namespace ACADLib.ViewModel
@@ -92,14 +93,16 @@ namespace ACADLib.ViewModel
             //Получаем выбранный объект
             Points newPoint = new Points();          
             newPoint.GetOneObject(1);
+
+            //Point3d PointPosition = newPoint.GetOneObject(1); 
           
             //Задаем его параметры в текстбоксы
-            X1 = newPoint._pointPosition.X;
-            Y1 = newPoint._pointPosition.Y;
-            Z1 = newPoint._pointPosition.Z;        
+            X1 = newPoint.PointPosition.X;
+            Y1 = newPoint.PointPosition.Y;
+            Z1 = newPoint.PointPosition.Z;        
 
             // Получаем ID точки
-            _selObjectID = newPoint.pointID;
+            _selObjectID = newPoint.PointID;
         }
 
 
@@ -109,12 +112,14 @@ namespace ACADLib.ViewModel
         private void BattonApplyPoint_ClickMethod()
         {           
             // Создаем точку с координатами из текстбоксов
-            Points newPoint = new Points();
+            //Points newPoint = new Points();
 
-            newPoint.AddPoint(X1,Y1,Z1);
+            Objects newPointObjects = new Objects();
+
+            newPointObjects.AddObject(1, new Point3d(X1,Y1,Z1), new Point3d(), 0);
 
             // Удаляем старую точку
-            newPoint.Delete(_selObjectID); 
+            newPointObjects.Delete(_selObjectID); 
         }   
         #endregion
     }   

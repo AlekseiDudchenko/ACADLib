@@ -8,6 +8,11 @@ namespace ACADLib.Models
 {
     public class Lines : Objects
     {
+        /*
+        public Point3d LineStartPoint;
+        public Point3d LineEndPoint;
+        public ObjectId LineID;
+        */
 
         /// <summary>
         /// Добавление новой линии
@@ -36,16 +41,20 @@ namespace ACADLib.Models
                     acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.ModelSpace],
                                                     OpenMode.ForWrite) as BlockTableRecord;
 
-                    // Создание отрезка 
-                    Line acLine = new Line(firstPoint, secondPoint);
+                    {
 
-                    // Установка для отрезка свойст по умолчанию. Свойства надо подавать как аргументы в функцию 
-                    acLine.SetDatabaseDefaults();
+                        // Создание отрезка 
+                        Line acLine = new Line(firstPoint, secondPoint);
 
-                    // Добавление нового объекта в запись таблицы блоков и в транзакцию
-                    acBlkTblRec.AppendEntity(acLine);
-                    acTrans.AddNewlyCreatedDBObject(acLine, true);
-                    
+                        // Установка для отрезка свойст по умолчанию. Свойства надо подавать как аргументы в функцию 
+                        acLine.SetDatabaseDefaults();
+
+                        // Добавление нового объекта в запись таблицы блоков и в транзакцию
+                        acBlkTblRec.AppendEntity(acLine);
+                        acTrans.AddNewlyCreatedDBObject(acLine, true);
+
+                    }
+
                     // Сохранение нового объекта в базе данных
                     acTrans.Commit();
                 }

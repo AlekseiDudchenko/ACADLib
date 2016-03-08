@@ -8,7 +8,24 @@ namespace ACADLib.Models
 {
     public class Points : Objects
     {
+        private Point3d _pointPosition;
+        public Point3d PointPosition
+        {
+            get { return _pointPosition; }
+            set { _pointPosition = value; }
+        }
 
+
+        public ObjectId PointID = new ObjectId();
+
+
+        public void GetPoint(DBPoint Point)
+        {
+            PointPosition = Point.Position;
+            PointID = Point.Id; 
+        }
+
+        /*
         /// <summary>
         /// Ставит точку с заданными координатами
         /// </summary>
@@ -38,26 +55,28 @@ namespace ACADLib.Models
                     BlockTableRecord acBlkTblRec;
                     acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.ModelSpace],
                                                     OpenMode.ForWrite) as BlockTableRecord;
-                    
-                    // Создаем точку с заданными координатами
-                    DBPoint acPoint = new DBPoint(new Point3d(X1, Y1, Z1));
-                        
-                    //Установка значений по умолчанию. (Здесь нужно будет копировать свойства старой линии) 
-                    //acPoint.SetDatabaseDefaults(); 
-                    
-                    // Добавляем новый объект в таблицу
-                    acBlkTblRec.AppendEntity(acPoint);
-                    acTrans.AddNewlyCreatedDBObject(acPoint, true);
-                    
-                    // Ствойства отображения точки 
-                    // http://docs.autodesk.com/ACD/2010/ENU/AutoCAD%20.NET%20Developer%27s%20Guide/index.html?url=WS1a9193826455f5ff2566ffd511ff6f8c7ca-415b.htm,topicNumber=d0e15219
-                    acCurDb.Pdmode = 0;
-                    acCurDb.Pdsize = 1;
-                                    
+
+                    {
+                        // Создаем точку с заданными координатами
+                        DBPoint acPoint = new DBPoint(new Point3d(X1, Y1, Z1));
+
+                        //Установка значений по умолчанию. (Здесь нужно будет копировать свойства старой линии) 
+                        //acPoint.SetDatabaseDefaults(); 
+
+                        // Добавляем новый объект в таблицу
+                        acBlkTblRec.AppendEntity(acPoint);
+                        acTrans.AddNewlyCreatedDBObject(acPoint, true);
+
+                        // Ствойства отображения точки 
+                        acCurDb.Pdmode = 0;
+                        acCurDb.Pdsize = 1;
+
+                    }
+
                     // Закрываем транзакцию 
                     acTrans.Commit();
                 }
             }
-        }
+        }*/
     }
 }

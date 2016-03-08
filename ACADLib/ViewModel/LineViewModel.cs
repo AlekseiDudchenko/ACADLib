@@ -138,15 +138,15 @@ namespace ACADLib.ViewModel
             newLine.GetOneObject(2);
 
             //Задаем его параметры в текстбоксы
-            X1 = newLine._lineStartPoint.X;          
-            Y1 = newLine._lineStartPoint.Y;          
-            Z1 = newLine._lineStartPoint.Z;           
-            X2 = newLine._lineEndPoint.X;
-            Y2 = newLine._lineEndPoint.Y;
-            Z2 = newLine._lineEndPoint.Z;
+            X1 = newLine.LineStartPoint.X;          
+            Y1 = newLine.LineStartPoint.Y;          
+            Z1 = newLine.LineStartPoint.Z;           
+            X2 = newLine.LineEndPoint.X;
+            Y2 = newLine.LineEndPoint.Y;
+            Z2 = newLine.LineEndPoint.Z;
 
             //Запоминем ObjectID выделенной линии
-            _selObjectID = newLine.lineID;         
+            _selObjectID = newLine.LineID;         
             
         }
 

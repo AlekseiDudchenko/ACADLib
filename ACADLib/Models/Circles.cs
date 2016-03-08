@@ -38,19 +38,20 @@ namespace ACADLib.Models
                     BlockTableRecord acBlkTblRec;
                     acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.ModelSpace],
                                                     OpenMode.ForWrite) as BlockTableRecord;
+                    {
+                        // добавляем окружность
+                        Circle acCircle = new Circle();
 
-                    // добавляем окружность
-                    Circle acCircle = new Circle();
+                        // устанавливаем параметры созданного объекта
+                        acCircle.SetDatabaseDefaults();
+                        acCircle.Center = point3d;
+                        acCircle.Radius = radius;
 
-                    // устанавливаем параметры созданного объекта
-                    acCircle.SetDatabaseDefaults();
-                    acCircle.Center = point3d;
-                    acCircle.Radius = radius;
+                        // добавляем созданный объект в пространство модели и в транзакцию
+                        acBlkTblRec.AppendEntity(acCircle);
+                        acTrans.AddNewlyCreatedDBObject(acCircle, true);
 
-                    // добавляем созданный объект в пространство модели и в транзакцию
-                    acBlkTblRec.AppendEntity(acCircle);
-                    acTrans.AddNewlyCreatedDBObject(acCircle, true);
-
+                    }
                     // фиксируем изменения
                     acTrans.Commit();
                 }
