@@ -20,10 +20,6 @@ namespace ACADLib.ViewModel
         }
 
         
-
-
-
-
         private ObjectId _selObjectID;
 
         private double _x1;

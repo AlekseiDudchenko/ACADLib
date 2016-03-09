@@ -9,6 +9,11 @@ namespace ACADLib.Models
 {
     public class Points : Objects
     {
+
+        #region Properties
+        /// <summary>
+        /// Координаты точки
+        /// </summary>
         private Point3d _pointPosition;
         public Point3d PointPosition
         {
@@ -23,9 +28,11 @@ namespace ACADLib.Models
             set { _pointID = value; }
         }
 
+        #endregion
+
 
         /// <summary>
-        /// Выделить с экрана отрезок
+        /// Выделить с экрана точку
         /// </summary>
         public void GetPoint()
         {
@@ -65,7 +72,7 @@ namespace ACADLib.Models
         /// <summary>
         /// Ставит точку с заданными координатами
         /// </summary>
-        /// <param name="X1"></param>
+        /// <param name="X1"></param> 
         /// <param name="Y1"></param>
         /// <param name="Z1"></param>
         public void AddPoint(double X1, double Y1, double Z1)

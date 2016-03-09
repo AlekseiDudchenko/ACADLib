@@ -11,7 +11,13 @@ namespace ACADLib.Models
     public class Circles : Objects
     {
 
+
+        #region Properties
+
         private Point3d _circleCenter;
+        /// <summary>
+        /// Координаты центра окружности
+        /// </summary>
         public Point3d CircleCenter
         {
             get { return _circleCenter; }
@@ -19,6 +25,9 @@ namespace ACADLib.Models
         }
 
         private double _circleRadius;
+        /// <summary>
+        /// Радиус окружности
+        /// </summary>
         public double CircleRadius
         {
             get { return _circleRadius; }
@@ -27,11 +36,11 @@ namespace ACADLib.Models
 
 
         public ObjectId CircleID;
- 
+        #endregion
 
 
         /// <summary>
-        /// Выделить с экрана отрезок
+        /// Выделить с экрана окружность
         /// </summary>
         public void GetCircle()
         {
@@ -68,7 +77,7 @@ namespace ACADLib.Models
 
  
         /// <summary>
-        /// Добавление окружности на ну с заданными параметрами 
+        /// Добавление окружности с заданными параметрами 
         /// </summary>
         /// <param name="point3d"></param>
         /// <param name="radius"></param>

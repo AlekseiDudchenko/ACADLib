@@ -8,8 +8,8 @@ namespace ACADLib.Models
 {
     public class Lines : Objects
     {
+        #region Properties
         private Point3d _lineStartPoint;
-
         public Point3d LineStartPoint
         {
             get { return _lineStartPoint; }
@@ -25,6 +25,9 @@ namespace ACADLib.Models
 
 
         public ObjectId LineID;
+
+        #endregion
+        
 
 
         /// <summary>
@@ -93,7 +96,6 @@ namespace ACADLib.Models
                                                     OpenMode.ForWrite) as BlockTableRecord;
 
                     {
-
                         // Создание отрезка 
                         Line acLine = new Line(firstPoint, secondPoint);
 
@@ -103,7 +105,6 @@ namespace ACADLib.Models
                         // Добавление нового объекта в запись таблицы блоков и в транзакцию
                         acBlkTblRec.AppendEntity(acLine);
                         acTrans.AddNewlyCreatedDBObject(acLine, true);
-
                     }
 
                     // Сохранение нового объекта в базе данных

@@ -220,7 +220,9 @@ namespace ACADLib.ViewModel
 
         #endregion
 
-
+        /// <summary>
+        /// Используемые цвета
+        /// </summary>
         enum myColors
         {
             Red,

@@ -13,7 +13,9 @@ namespace ACADLib.Models
 {
     public class Objects //: INotifyPropertyChanged
     {
-
+        /// <summary>
+        /// Тип объекта
+        /// </summary>
         public enum TypeObject
         {
             Point,
@@ -21,10 +23,7 @@ namespace ACADLib.Models
             Circle
         }
                    
-        // По ID удаляется объект.
-        public ObjectId SelectedObjectId; //НИГДЕ НЕ ИСПОЛЬЗУЕТСЯ!
-
-        
+    
         /// <summary>
         /// Позволяет выделить объект в AutoCAD мышкой
         /// </summary>
