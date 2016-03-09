@@ -29,8 +29,9 @@ namespace ACADLib.ViewModel
 
         // Список слоев
         private string[] _layerNameList;
-        public string[] LayerNameList 
-        { 
+
+        public string[] LayerNameList
+        {
             get { return _layerNameList; }
             set
             {
@@ -46,6 +47,7 @@ namespace ACADLib.ViewModel
 
         // Цвет слоя 
         private Color _layerColor;
+
         public Color LayerColor
         {
             get { return _layerColor; }
@@ -61,7 +63,8 @@ namespace ACADLib.ViewModel
 
         // Color Index
         private int _colorIndex;
-        public int ColorIndex 
+
+        public int ColorIndex
         {
             get { return _colorIndex; }
             set
@@ -76,6 +79,7 @@ namespace ACADLib.ViewModel
 
         // Имя создаваемого или изменяемого слоя
         private string _layerName;
+
         public string LayerName
         {
             get { return _layerName; }
@@ -91,6 +95,7 @@ namespace ACADLib.ViewModel
 
         // Видимлсть слоя
         private bool _isOff;
+
         public bool IsOff
         {
             get { return _isOff; }
@@ -107,6 +112,7 @@ namespace ACADLib.ViewModel
 
         // Имя выбранного слоя
         private string _selectedLayer;
+
         public string SelectedLayer
         {
             get { return _selectedLayer; }
@@ -119,7 +125,7 @@ namespace ACADLib.ViewModel
                 }
             }
         }
-      
+
         #endregion
 
 
@@ -214,38 +220,38 @@ namespace ACADLib.ViewModel
 
         #endregion
 
+
+        enum myColors
+        {
+            Red,
+            Green,
+            Yellow,
+            Blue,
+            White,
+            Black,
+            Gray
+        }
+
         /// <summary>
         /// Получаем настойки для слоя из формы в глобальные переменные
         /// </summary>
         void GetColor()
         {
-
-            //получаем значение ComboBoxColor и выбираем соответствующий цвет 
-            switch (ColorIndex)
-            {
-                case 0:
-                    LayerColor = Color.FromRgb(255, 0, 0); // Красный
-                    break;
-                case 1:
-                    LayerColor = Color.FromRgb(0, 255, 0);  // Зеленый
-                    break;
-                case 2:
-                    LayerColor = Color.FromRgb(255, 255, 0);  // Желтый
-                    break;
-                case 3:
-                    LayerColor = Color.FromRgb(0, 0, 255);  // Синий
-                    break;
-                case 4:
-                    LayerColor = Color.FromRgb(255, 255, 255);  // Белый
-                    break;
-                case 5:
-                    LayerColor = Color.FromRgb(0, 0, 0);  // Черный
-                    break;
-                case 6:
-                    LayerColor = Color.FromRgb(192, 192, 192);  // Серый
-                    break;
-            }
-         }    
+            if (ColorIndex == (int) myColors.Red)
+                LayerColor = Color.FromColor(System.Drawing.Color.Red);
+            if (ColorIndex == (int) myColors.Green)
+                LayerColor = Color.FromColor(System.Drawing.Color.Green);
+            if (ColorIndex == (int) myColors.Yellow)
+                LayerColor = Color.FromColor(System.Drawing.Color.Yellow);
+            if (ColorIndex == (int)myColors.Blue)
+                LayerColor = Color.FromColor(System.Drawing.Color.Blue);
+            if (ColorIndex == (int)myColors.White)
+                LayerColor = Color.FromColor(System.Drawing.Color.White);
+            if (ColorIndex == (int) myColors.Black)
+                LayerColor = Color.FromColor(System.Drawing.Color.Black);
+            if (ColorIndex == (int)myColors.Gray)
+                LayerColor = Color.FromColor(System.Drawing.Color.Gray);
+        }
     }
 
 }

@@ -6,6 +6,8 @@ namespace ACADLib.ViewModel
 {
     class MainViewModel : ViewModelBase 
     {
+
+
         #region Constructor
 
         /// <summary>
