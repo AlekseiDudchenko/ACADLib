@@ -26,7 +26,7 @@ namespace ACADLib.Models
 
         
         /// <summary>
-        /// Позволяет выделить объект в AutoCAD мышкой
+        /// Выделить с экрана отрезок
         /// </summary>
         public void GetOneObject(TypeObject typeObject)
         {
@@ -92,7 +92,7 @@ namespace ACADLib.Models
         /// <summary>
         /// Добавление нового объекта
         /// </summary>
-        public void AddObject(TypeObject typeObject, Point3d firstPoint, Point3d secondPoint, double radius)
+        public void AddObject(int typeObject, Point3d firstPoint, Point3d secondPoint, double radius)
         {
             // Получение текущего документа
             Document acDoc = Application.DocumentManager.MdiActiveDocument;
@@ -118,7 +118,7 @@ namespace ACADLib.Models
 
                     switch (typeObject)
                     {
-                        case TypeObject.Point: //point
+                        case 1: //point
                         {
                             // Создаем точку с заданными координатами
                             DBPoint acPoint = new DBPoint(firstPoint);
@@ -133,7 +133,7 @@ namespace ACADLib.Models
                         }
                         break;
 
-                        case TypeObject.Line: // line
+                        case 2: // line
                         {
                             // Создание отрезка 
                             Line acLine = new Line(firstPoint, secondPoint);
@@ -147,7 +147,7 @@ namespace ACADLib.Models
                         } 
                         break;
 
-                        case TypeObject.Circle: // circle
+                        case 3: // circle
                         {
                             // добавляем окружность
                             Circle acCircle = new Circle();

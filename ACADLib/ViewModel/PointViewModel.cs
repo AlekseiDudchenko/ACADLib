@@ -111,16 +111,11 @@ namespace ACADLib.ViewModel
         private void BattonApplyPoint_ClickMethod()
         {           
             // Создаем точку с координатами из текстбоксов
-            //Все 3 приведенных ниже варианта работают
-            
             //Points newPoint = new Points();
-            //newPoint.AddPoint(X1,Y1,Z1);
-
-            //Points newPoints = new Points();
-            //newPoints.AddObject(Objects.TypeObject.Point, new Point3d(X1, Y1, Z1), new Point3d(), 0);
 
             Objects newPointObjects = new Objects();
-            newPointObjects.AddObject(Objects.TypeObject.Point, new Point3d(X1,Y1,Z1), new Point3d(), 0);
+
+            newPointObjects.AddObject(1, new Point3d(X1,Y1,Z1), new Point3d(), 0);
 
             // Удаляем старую точку
             newPointObjects.Delete(_selObjectID); 
