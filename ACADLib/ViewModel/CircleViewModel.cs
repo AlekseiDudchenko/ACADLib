@@ -94,6 +94,7 @@ namespace ACADLib.ViewModel
 
         #endregion
 
+
         #region Methods
 
         /// <summary>
@@ -103,17 +104,18 @@ namespace ACADLib.ViewModel
         {
             
             //Получаем выбранный объект
-            Circles NewCircle = new Circles();
-            NewCircle.GetOneObject(3);
+            Circles newCircle = new Circles();
+            //NewCircle.GetOneObject((int)MainViewModel.TypeObject.Circle);
+            newCircle.GetCircle();
 
             //Задаем параметры 
-            X1 = NewCircle._circleCenter.X;
-            Y1 = NewCircle._circleCenter.Y;
-            Z1 = NewCircle._circleCenter.Z;
-            CircleRadius = NewCircle._circleRadius;
+            X1 = newCircle.CircleCenter.X;
+            Y1 = newCircle.CircleCenter.Y;
+            Z1 = newCircle.CircleCenter.Z;
+            CircleRadius = newCircle.CircleRadius;
 
             // Получаем ID окружности
-            _selObjectID = NewCircle.circleID;
+            _selObjectID = newCircle.CircleID;
             
         }
 

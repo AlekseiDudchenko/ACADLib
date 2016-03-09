@@ -91,10 +91,9 @@ namespace ACADLib.ViewModel
         private void ButtonGetPoint_ClickMethod()
         {
             //Получаем выбранный объект
-            Points newPoint = new Points();          
-            newPoint.GetOneObject(1);
-
-            //Point3d PointPosition = newPoint.GetOneObject(1); 
+            Points newPoint = new Points();    
+            //newPoint.GetOneObject(Objects.TypeObject.Point);
+            newPoint.GetPoint();
           
             //Задаем его параметры в текстбоксы
             X1 = newPoint.PointPosition.X;

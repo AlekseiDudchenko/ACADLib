@@ -3,14 +3,69 @@ using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
 using System;
-
-
+using Autodesk.AutoCAD.EditorInput;
 using acad = Autodesk.AutoCAD.ApplicationServices;
 
 namespace ACADLib.Models
 {
     public class Circles : Objects
     {
+
+        private Point3d _circleCenter;
+        public Point3d CircleCenter
+        {
+            get { return _circleCenter; }
+            set { _circleCenter = value; }
+        }
+
+        private double _circleRadius;
+        public double CircleRadius
+        {
+            get { return _circleRadius; }
+            set { _circleRadius = value; }
+        }
+
+
+        public ObjectId CircleID;
+ 
+
+
+        /// <summary>
+        /// Выделить с экрана отрезок
+        /// </summary>
+        public void GetCircle()
+        {
+            var acDocE = Application.DocumentManager.MdiActiveDocument.Editor;
+            Document acDoc = Application.DocumentManager.MdiActiveDocument;
+
+            Database acCurDb = acDoc.Database;
+
+            using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+            {
+                var promtResult = acDocE.GetEntity("Выберите Объект");
+
+                try
+                {
+                    if (promtResult.Status == PromptStatus.OK)
+                    {
+                        Circle acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as Circle;
+
+                        //Записываем нужные аттрибуты в глобальные переменные
+                        _circleCenter = acEnt.Center;
+                        _circleRadius = acEnt.Radius;
+                        CircleID = acEnt.ObjectId;
+                    }
+                }
+                catch (Autodesk.AutoCAD.Runtime.Exception Ex)
+                {
+                    Autodesk.AutoCAD.ApplicationServices.Application.ShowAlertDialog("Error:\n" + Ex.Message);
+                }
+
+                //Закрываем транзакцию
+                acTrans.Commit();
+            }
+        }
+
  
         /// <summary>
         /// Добавление окружности на ну с заданными параметрами 

@@ -1,6 +1,6 @@
 ﻿using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
-
+using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Geometry;
 
 
@@ -8,11 +8,62 @@ namespace ACADLib.Models
 {
     public class Lines : Objects
     {
-        /*
-        public Point3d LineStartPoint;
-        public Point3d LineEndPoint;
+        private Point3d _lineStartPoint;
+
+        public Point3d LineStartPoint
+        {
+            get { return _lineStartPoint; }
+            set { _lineStartPoint = value; }
+        }
+
+        private Point3d _lineEndPoint;
+        public Point3d LineEndPoint
+        {
+            get { return _lineEndPoint; }
+            set { _lineEndPoint = value; }
+        }
+
+
         public ObjectId LineID;
-        */
+
+
+        /// <summary>
+        /// Выделить с экрана отрезок
+        /// </summary>
+        public void GetLine()
+        {
+            var acDocE = Application.DocumentManager.MdiActiveDocument.Editor;
+            Document acDoc = Application.DocumentManager.MdiActiveDocument;
+
+            Database acCurDb = acDoc.Database;
+
+            using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+            {
+                var promtResult = acDocE.GetEntity("Выберите Объект");
+
+                try
+                {
+                    if (promtResult.Status == PromptStatus.OK)
+                    {
+                        Line acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as Line;
+                        
+                        _lineStartPoint = acEnt.StartPoint;
+                        _lineEndPoint = acEnt.EndPoint;
+                        LineID = acEnt.Id;
+                    }
+                }
+                catch (Autodesk.AutoCAD.Runtime.Exception Ex)
+                {
+                    Autodesk.AutoCAD.ApplicationServices.Application.ShowAlertDialog("Error:\n" + Ex.Message);
+                }
+
+                //Закрываем транзакцию
+                acTrans.Commit();
+            }
+        }
+
+
+
 
         /// <summary>
         /// Добавление новой линии

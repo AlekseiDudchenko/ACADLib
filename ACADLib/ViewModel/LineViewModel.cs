@@ -135,7 +135,8 @@ namespace ACADLib.ViewModel
    
             //Получаем выбранный объект
             Lines newLine = new Lines();
-            newLine.GetOneObject(2);
+            //newLine.GetOneObject(Objects.TypeObject.Line);
+            newLine.GetLine();
 
             //Задаем его параметры в текстбоксы
             X1 = newLine.LineStartPoint.X;          

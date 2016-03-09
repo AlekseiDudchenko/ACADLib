@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Geometry;
 
 
@@ -15,17 +16,58 @@ namespace ACADLib.Models
             set { _pointPosition = value; }
         }
 
-
-        public ObjectId PointID = new ObjectId();
-
-
-        public void GetPoint(DBPoint Point)
+        private ObjectId _pointID;
+        public ObjectId PointID
         {
-            PointPosition = Point.Position;
-            PointID = Point.Id; 
+            get { return _pointID; }
+            set { _pointID = value; }
         }
 
         /*
+        public void GetOnePoint(DBPoint nDbPoint)
+        {
+            _pointPosition = nDbPoint.Position;
+        }
+        */
+
+        /// <summary>
+        /// Выделить с экрана отрезок
+        /// </summary>
+        public void GetPoint()
+        {
+            var acDocE = Application.DocumentManager.MdiActiveDocument.Editor;
+            Document acDoc = Application.DocumentManager.MdiActiveDocument;
+
+            Database acCurDb = acDoc.Database;
+
+            using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+            {
+                var promtResult = acDocE.GetEntity("Выберите Объект");
+
+                try
+                {
+                    if (promtResult.Status == PromptStatus.OK)
+                    {
+
+                        DBPoint acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as DBPoint;
+
+                        _pointPosition = acEnt.Position;
+                        _pointID = acEnt.Id;
+
+                    }
+                }
+                catch (Autodesk.AutoCAD.Runtime.Exception Ex)
+                {
+                    Autodesk.AutoCAD.ApplicationServices.Application.ShowAlertDialog("Error:\n" + Ex.Message);
+                }
+
+                //Закрываем транзакцию
+                acTrans.Commit();
+            }
+        }
+
+
+
         /// <summary>
         /// Ставит точку с заданными координатами
         /// </summary>
@@ -77,6 +119,6 @@ namespace ACADLib.Models
                     acTrans.Commit();
                 }
             }
-        }*/
+        }
     }
 }

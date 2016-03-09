@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.ComponentModel;
+using ACADLib.ViewModel;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
@@ -12,25 +13,22 @@ namespace ACADLib.Models
 {
     public class Objects //: INotifyPropertyChanged
     {
-        
-        //public Point3d LineStartPoint;
-        //public Point3d LineEndPoint;
-        //public ObjectId LineID = new ObjectId();
 
-        public Point3d PointOne;
-   
-
-        //public double _circleRadius;
-        //public Point3d _circleCenter;
-        //public ObjectId circleID = new ObjectId();
-        
+        public enum TypeObject
+        {
+            Point,
+            Line,
+            Circle
+        }
+                   
         // По ID удаляется объект.
         public ObjectId SelectedObjectId; //НИГДЕ НЕ ИСПОЛЬЗУЕТСЯ!
 
+        
         /// <summary>
         /// Выделить с экрана отрезок
         /// </summary>
-        public void GetOneObject(int typeObject)
+        public void GetOneObject(TypeObject typeObject)
         {
             var acDocE = Application.DocumentManager.MdiActiveDocument.Editor;
             Document acDoc = Application.DocumentManager.MdiActiveDocument;
@@ -47,34 +45,33 @@ namespace ACADLib.Models
                     {
                         switch (typeObject)
                         {
-                            case 1: //point
+                            case TypeObject.Point: 
                                 {
                                     DBPoint acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as DBPoint;
                                     //Points newPoints = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead);// as Points;
-
-                                    PointOne = acEnt.Position;
-                                    //  acEnt.Get
+                                   
 
                                     //Получаем координаты и ObjectId
-                                    //newPoint.PointPosition = acEnt.Position;
-                                    //newPoint.PointID = acEnt.Id;        
+                                    //PointPosition = acEnt.Position;
+                                    //PointID = acEnt.Id;        
                                 } break;
-                            case 2: //line
+                            case TypeObject.Line: 
                                 {
                                     Line acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as Line;
 
-                                    LineStartPoint = acEnt.StartPoint;
-                                    LineEndPoint = acEnt.EndPoint;
-                                    LineID = acEnt.Id;
+                                    //Получаем координаты и ObjectId
+                                    //LineStartPoint = acEnt.StartPoint;
+                                    //LineEndPoint = acEnt.EndPoint;
+                                    //LineID = acEnt.Id;
                                 } break;
-                            case 3: // circle
+                            case TypeObject.Circle: 
                                 {
                                     Circle acEnt = acTrans.GetObject(promtResult.ObjectId, OpenMode.ForRead) as Circle;
 
-                                    //Записываем нужные аттрибуты в глобальные переменные
-                                    _circleCenter = acEnt.Center;
-                                    _circleRadius = acEnt.Radius;
-                                    circleID = acEnt.ObjectId;
+                                    //Получаем координаты и ObjectId
+                                    //CircleCenter = acEnt.Center;
+                                    //CircleRadius = acEnt.Radius;
+                                    //circleID = acEnt.ObjectId;
                                 } break;
                         }
                     }
@@ -91,7 +88,7 @@ namespace ACADLib.Models
 
 
 
-
+        //TODO Сделать перегрузки для разных типов объктов
         /// <summary>
         /// Добавление нового объекта
         /// </summary>

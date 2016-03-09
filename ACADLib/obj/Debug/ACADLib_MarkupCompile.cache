@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Алексей Дудченко\Desktop\ACADLib0303161200\ACADLib\obj\Debug\
+C:\Users\Алексей Дудченко\Desktop\ACADLib-fir\ACADLib\obj\Debug\
 ACADLib
 none
 false
@@ -16,5 +16,5 @@ DEBUG;TRACE
 20640723929
 Views\MainUserControl.xaml;Views\PointUserControl.xaml;Views\LineUserControl.xaml;Views\CircleUserControl.xaml;
 
-True
+False
 
