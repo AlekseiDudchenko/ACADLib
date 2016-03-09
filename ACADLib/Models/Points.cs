@@ -23,12 +23,6 @@ namespace ACADLib.Models
             set { _pointID = value; }
         }
 
-        /*
-        public void GetOnePoint(DBPoint nDbPoint)
-        {
-            _pointPosition = nDbPoint.Position;
-        }
-        */
 
         /// <summary>
         /// Выделить с экрана отрезок
