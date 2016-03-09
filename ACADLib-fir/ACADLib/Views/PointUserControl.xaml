@@ -1,0 +1,81 @@
+﻿<Window x:Class="ACADLib.PointUserControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ACADLib.ViewModel"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        d:DesignHeight="300"
+        d:DesignWidth="300"
+        mc:Ignorable="d">
+    <Window.DataContext>
+        <local:PointViewModel>           
+        </local:PointViewModel>
+    </Window.DataContext>
+
+    <StackPanel>
+        <Label Content="Точка"
+               FontSize="14"
+               FontWeight="Bold" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="55*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="55*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Content="X1" />
+            <TextBox x:Name="TBX1"
+                     Grid.Row="0"
+                     Grid.Column="1" 
+                     Text="{Binding Path=X1, Mode=TwoWay}"/>
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="Y1" />
+            <TextBox x:Name="TBY1"
+                     Grid.Row="1"
+                     Grid.Column="1" 
+                     Text="{Binding Path=Y1, Mode=TwoWay}"/>
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Content="Z1" />
+            <TextBox x:Name="TBZ1"
+                     Grid.Row="2"
+                     Grid.Column="1" 
+                     Text="{Binding Path=Z1, Mode=TwoWay}"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="ButtonGetPoint"
+                    Grid.Row="0"
+                    Command="{Binding ButtonGetPointCommand}"
+                    Content="Выбрать точку" />
+            <Button x:Name="BattonApplyPoint"
+                    Grid.Row="1"
+                    Command="{Binding BattonApplyPointCommand}"
+                    Content="Применить" />
+        </Grid>
+
+    </StackPanel>
+</Window>
