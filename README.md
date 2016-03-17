@@ -1,5 +1,6 @@
 # ACADLib
 Plug-in for AutoCAD (WPF). Edits layers, lines, dots and circles.
+(Весь заявленный функционал работает)
 
 TODO:
 Не принято решение по реализации ООП. 
